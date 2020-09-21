@@ -24,7 +24,11 @@ class RemoteAuthentication {
         body: body,
       );
     } on HttpError {
-      throw DomainError.unexpected;
+      cath(error) {
+        throw error == HttpError.unauthorized
+            ? DomainError.unexpected
+            : DomainError.unexpected;
+      }
     }
   }
 }
