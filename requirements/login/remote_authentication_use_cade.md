@@ -10,7 +10,7 @@
 1. Sistema retorna uma mensagem de erro inesperado #Concluído
 
 > ## Exceção - Resposta inválida
-1. Sistema retorna uma mensagem de erro inesperado
+1. Sistema retorna uma mensagem de erro inesperado #Concluído
 
 > ## Exceção - Falha no servidor
 1. Sistema retorna uma mensagem de erro inesperado
