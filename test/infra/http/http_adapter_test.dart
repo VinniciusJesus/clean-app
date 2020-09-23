@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:faker/faker.dart';
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
@@ -21,6 +23,7 @@ class HttpAdapter {
     await client.post(
       url,
       headers: headers,
+      body: jsonEncode(body)
     );
   }
 }
@@ -33,9 +36,9 @@ void main() {
   String url;
 
   setUp(() {
-     client = ClientSpy();
-     sut = HttpAdapter(client);
-     url = faker.internet.httpUrl();
+    client = ClientSpy();
+    sut = HttpAdapter(client);
+    url = faker.internet.httpUrl();
   });
   group(
     'post',
@@ -43,16 +46,16 @@ void main() {
       test(
         'Should call post with correct values',
         () async {
-          await sut.request(url: url, method: 'post');
+          await sut.request(
+              url: url, method: 'post', body: {'any_key': 'any_value'});
 
           verify(
-            client.post(
-              url,
-              headers: {
-                'content-type': 'application/json',
-                'accepte': 'application/json',
-              },
-            ),
+            client.post(url,
+                headers: {
+                  'content-type': 'application/json',
+                  'accepte': 'application/json',
+                },
+                body: '{"any_key":"any_value"}'),
           );
         },
       );
