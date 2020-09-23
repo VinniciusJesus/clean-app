@@ -8,13 +8,7 @@
                      "name": "Flutter: Run all Tests",
                      "type": "dart",
                      "request": "launch",
-                     "program": "./test/"
+                     "program": "./test/infra"
               },
-              {
-                     "name": "flutter_curso_manguinho",
-                     "request": "launch",
-                     "type": "dart",
-                     "program": "./test/"
-              }
        ]
 }
