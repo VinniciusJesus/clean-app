@@ -13,7 +13,8 @@
               {
                      "name": "flutter_curso_manguinho",
                      "request": "launch",
-                     "type": "dart"
+                     "type": "dart",
+                     "program": "./test/"
               }
        ]
 }
