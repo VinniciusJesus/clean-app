@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+
 import '../pages/pages.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +10,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return MaterialApp(
       title: '4dev',
       theme: ThemeData(
