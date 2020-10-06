@@ -1,8 +1,8 @@
  ✅ Os campos devem começar sem exibir mensagem de erro
  ✅ O botão de fazer login deve começar desabilitado
- ✅ Após digitar algo em um campo, a mensagem de erro só deve sumir se o campo for válido
- Validar email quando o usuário digitar no campo
- Mostrar mensagem de erro se o email for inválido
+     Após digitar algo em um campo, a mensagem de erro só deve sumir se o campo for válido
+ ✅ Validar email quando o usuário digitar no campo
+ ✅Mostrar mensagem de erro se o email for inválido
  Remover mensagem de erro se o email for válido
  ✅ Validar senha quando o usuário digitar no campo
  Mostrar mensagem de erro se a senha for inválida
