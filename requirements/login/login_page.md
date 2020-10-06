@@ -5,7 +5,7 @@
  ✅ Mostrar mensagem de erro se o email for inválido
  ✅ Remover mensagem de erro se o email for válido
  ✅ Validar senha quando o usuário digitar no campo
- Mostrar mensagem de erro se a senha for inválida
+ ✅ Mostrar mensagem de erro se a senha for inválida
  Remover mensagem de erro se a senha for válida
  Habilitar o botão de fazer login se todos os campos forem válidos
  Desabilitar o botão de fazer login se algum campo for inválido
