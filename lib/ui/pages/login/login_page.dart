@@ -2,6 +2,8 @@ import 'package:curso_manguinho/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/components.dart';
+import '../../components/components.dart';
+import '../../components/components.dart';
 
 class LoginPage extends StatefulWidget {
   final LoginPresenter presenter;
@@ -26,26 +28,9 @@ class _LoginPageState extends State<LoginPage> {
         builder: (context) {
           widget.presenter.isLoadingStream.listen((isLoading) {
             if (isLoading) {
-              showDialog(
-                context: context,
-                barrierDismissible: false,
-                child: SimpleDialog(
-                  children: <Widget>[
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CircularProgressIndicator(),
-                        SizedBox(height: 10),
-                        Text('Aguarde...', textAlign: TextAlign.center),
-                      ],
-                    ),
-                  ],
-                ),
-              );
+              showLoading(context);
             } else {
-              if (Navigator.canPop(context)) {
-                Navigator.of(context).pop();
-              }
+              hideLoading(context);
             }
           });
 
