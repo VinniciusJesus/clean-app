@@ -1,9 +1,9 @@
-import 'package:curso_manguinho/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../components/components.dart';
 import 'components/components.dart';
+import 'login_presenter.dart';
 
 class LoginPage extends StatefulWidget {
   final LoginPresenter presenter;
@@ -60,9 +60,10 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           LoginButton(),
                           FlatButton.icon(
-                              onPressed: () {},
-                              icon: Icon(Icons.person),
-                              label: Text('Criar Conta'))
+                            onPressed: () {},
+                            icon: Icon(Icons.person),
+                            label: Text('Criar Conta')
+                          )
                         ],
                       ),
                     ),
@@ -76,5 +77,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-

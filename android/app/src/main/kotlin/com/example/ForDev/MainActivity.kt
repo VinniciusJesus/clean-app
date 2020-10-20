@@ -1,4 +1,4 @@
-package com.example.curso_manguinho
+package com.example.ForDev
 
 import io.flutter.embedding.android.FlutterActivity
 

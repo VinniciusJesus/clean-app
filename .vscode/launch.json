@@ -5,16 +5,15 @@
        "version": "0.2.0",
        "configurations": [
               {
-                     "name": "Flutter",
-                     "type": "dart",
-                     "request": "launch",
-                     "program": "lib/main/main.dart"
-              },
-              {
-                     "name": "Flutter: Run all Tests",
+                     "name": "Dart: Run all Tests",
                      "type": "dart",
                      "request": "launch",
                      "program": "./test/"
               },
+              {
+                     "name": "curso_manguinho",
+                     "request": "launch",
+                     "type": "dart"
+              }
        ]
 }

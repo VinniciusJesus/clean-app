@@ -1,7 +1,8 @@
 import 'dart:async';
 
-import 'package:curso_manguinho/main/protocols/protocols.dart';
 import 'package:meta/meta.dart';
+
+import '../../protocols/protocols.dart';
 
 class StreamLoginPresenter {
   final Validation validation;
@@ -13,20 +14,19 @@ class StreamLoginPresenter {
   String _emailError;
   String _passwordError;
 
-  Stream<String> get emailErrorStream =>
-      _emailErrorController.stream.distinct();
-  Stream<String> get passwordErrorStream =>
-      _passwordErrorController.stream.distinct();
-  Stream<bool> get isFormValidStream =>
-      _isFormValidController.stream.distinct();
+  Stream<String> get emailErrorStream => _emailErrorController.stream.distinct();
+  Stream<String> get passwordErrorStream => _passwordErrorController.stream.distinct();
+  Stream<bool> get isFormValidStream => _isFormValidController.stream.distinct();
 
   StreamLoginPresenter({@required this.validation});
 
   void _validateForm() {
-    _isFormValidController.add(_emailError == null &&
-        _email != null &&
-        _passwordError == null &&
-        _password != null);
+    _isFormValidController.add(
+      _emailError == null
+        && _email != null
+        && _passwordError == null
+        && _password != null
+    );
   }
 
   void validateEmail(String email) {
